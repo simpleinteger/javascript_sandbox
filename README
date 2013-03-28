@@ -17,3 +17,8 @@ Preferences:
 ________________________
 
 License
+
+<% @users.each do |user| %>
+  <p><%= user.name %> <%= link_to root_url(:subdomain => user.name), root_url(:subdomain => user.name) %></p>
+<% end %>
+

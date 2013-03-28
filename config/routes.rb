@@ -1,4 +1,5 @@
 JavascriptSandbox::Application.routes.draw do
+  root :to => "home#index"
   authenticated :user do
     root :to => 'home#index'
   end
@@ -7,5 +8,4 @@ JavascriptSandbox::Application.routes.draw do
   constraints(Subdomain) do
     match '/' => 'profiles#show'
   end
-  root :to => "home#index"
 end
